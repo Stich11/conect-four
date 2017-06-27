@@ -1,0 +1,20 @@
+{
+  "name": "conect-four",
+  "homepage": "https://github.com/Stich11/conect-four",
+  "authors": [
+    "Stich11"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

@@ -1,0 +1,90 @@
+html body {
+	background-color:green;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+td {
+	height: 180px;
+	width: 180px;
+	justify-content: center;
+	z-index:2;
+}
+
+.spot {
+	background: -webkit-radial-gradient(75px 75px, circle, green 75px, gray 75px);
+	width:150px;
+	height:150px;
+	padding:none;
+	border:none;
+	z-index:4;
+}
+.square {
+	background-color:green;
+	width:150px;
+	height:150px;
+	padding:none;
+	border:none;	
+	z-index:3;
+}
+.board {
+	background-color:gray;
+	max-width: 100%;
+    margin-bottom: 20px;
+    z-index:9;
+}
+.sq00{
+	border-left:solid 25px gray;
+}
+.sq10{
+	border-left:solid 25px gray;
+}
+.sq20{
+	border-left:solid 25px gray;
+}
+.sq30{
+	border-left:solid 25px gray;
+}
+.sq40{
+	border-left:solid 25px gray;
+}
+.sq50{
+	border-left:solid 25px gray;
+}
+.sq60{
+	border-left:solid 25px gray;
+}
+
+.draggabledroppablered{
+	background: -webkit-radial-gradient(75px 75px, circle, red 75px, transparent 75px);
+	width:150px;
+	height:150px;
+	position:absolute;
+
+}
+tr{
+	z-index:1;
+}
+
+.drag{
+	background: -webkit-radial-gradient(75px 75px, circle, red 75px, transparent 75px);
+	width:150px;
+	height:150px;
+	z-index:10;
+
+}
+
+.drag2{
+	background: -webkit-radial-gradient(75px 75px, circle, blue 75px, transparent 75px);
+	width:150px;
+	height:150px;
+	z-index:10;
+
+}
+
+.hidden{
+	display:none;
+}
