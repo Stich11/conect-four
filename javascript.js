@@ -20,15 +20,24 @@ $(document).ready(function(){
       var clasname = $(this).children('div').attr('class').split(' ')[1]
       var color = ui.draggable.attr("color")
       if(clasname === "sp00" || clasname === "sp01" || clasname === "sp02" || clasname === "sp03" || clasname === "sp04" || clasname === "sp05" || clasname === "sp06" || clasname === "sp07"){
-        if($('.'+clasname+'').parent().css('background-color') == "rgb(0, 128, 0)"){
+        if($('.'+clasname+'').parent().css('background-color') == "rgba(0, 0, 0, 0)"){
           var spotto = class_toanimateto(clasname);
-          spotto = $(spotto).position();
-          var $todrag = $('<div class="draggabledroppablered"></div>')         
-          $todrag.appendTo('.'+clasname+'')
+          var spotfrom = $('.'+clasname+'').position();
+          var spottop = $(spotto).position();
+          var $todrag = $('<div class="draggabledroppable'+color+'"></div>')  
+          $todrag.css({
+            'left': spotfrom.left,
+            'top': spotfrom.top
+          })       
+          $todrag.appendTo('.fun')         
           $todrag.animate({
-              left: spotto.left,
-              top: spotto.top
-          }, 10000)
+              left: spottop.left,
+              top: spottop.top
+          }, 1000)
+          setTimeout(function(){
+            $(spotto).parent().css('background-color', color)
+            clear('.draggabledroppable'+color+'')
+          }, 900)
         }
       }
       if (color === 'red'){
@@ -72,12 +81,12 @@ $(document).ready(function(){
       if (classname === 'sp0'+iii+''){
         for(var ii = 0; ii <= 8; ii++){
           if(start){
-            if($('.sp'+ii+''+iii+'').parent().css('background-color') !== "rgb(0, 128, 0)"){
+            if($('.sp'+ii+''+iii+'').parent().css('background-color') !== "rgba(0, 0, 0, 0)"){
               return "full"
             }
             start = false;
           }
-          if($('.sp'+ii+''+iii+'').parent().css('background-color') !== "rgb(0, 128, 0)"){
+          if($('.sp'+ii+''+iii+'').parent().css('background-color') !== "rgba(0, 0, 0, 0)"){
             var i = ii - 1
             return '.sp'+i+''+iii+''
           }
