@@ -55,7 +55,7 @@ tr{
 	z-index:1;
 }
 
-.drag{
+.dragred{
 	background: -webkit-radial-gradient(75px 75px, circle, red 75px, transparent 75px);
 	width:150px;
 	height:150px;
@@ -63,7 +63,7 @@ tr{
 
 }
 
-.drag2{
+.dragblue{
 	background: -webkit-radial-gradient(75px 75px, circle, blue 75px, transparent 75px);
 	width:150px;
 	height:150px;
